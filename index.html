@@ -4,276 +4,127 @@
     <meta name="viewport" content="width=device-width, initial scale=1.0">
     <title>SED</title>
     <style>
-        body{
-            user-select:none;
+        body {
+            user-select: none;
         }
         html, body, footer {
-            font-family:'Times New Roman', Times, serif;
+            font-family: 'Times New Roman', Times, serif;
         }
         #sed-website {
-            background-image: url("SED _Background.png");
+            background-image: url("SED_Background.png");
             background-size: cover;
-            background-position: center center;
-            opacity: 0.85
+            background-position: center;
+            opacity: 0.85;
         }
-        .btn{
+        .btn {
             color: white;
             border-radius: 50px;
-            height: 50px;
+            padding: 12px 30px;
             background-color: transparent;
             border: none;
             font-family: 'Times New Roman', Times, serif;
             font-weight: bold;
+            transition: all 0.3s ease;
         }
         .btn:hover {
             background-color: white;
-            opacity: 0.70;
+            opacity: 0.7;
             color: black;
-            border-radius: 50px;
             text-decoration: underline;
         }
         #newsletters {
-            margin-left: 625px;
+            display: block;
+            margin: 2rem auto;
             background-color: white;
-            color:black;
+            color: black;
             border: none;
-            font-family: 'Times New Roman', Times, serif;
             border-radius: 10px;
-            height:35px;
-            width:250px;
-            font-weight:bold;
+            height: 40px;
+            width: 60%;
+            max-width: 300px;
+            font-weight: bold;
+            transition: all 0.3s ease;
         }
         #newsletters:hover {
-            background-color:black;
-            color:white;
-            font-family:'Times New Roman', Times, serif
+            background-color: black;
+            color: white;
         }
         .topic {
-            color:white;
-            margin-left: 50px;
-            font-size: 30px
+            color: white;
+            margin: 1rem;
+            font-size: 2rem;
         }
-        .detail {
-            color:white;
-            margin-left: 50px;
-        }
-        .detail2 {
-            color:white;
-            margin-left: 50px;
-            margin-right: 50px;
-        }
-        .detail3 {
-            margin-left: 130px;
-            color:white;
+        .detail, .detail2, .detail3, .detail4, .detail5, .detail6 {
+            color: white;
+            margin: 0.8rem 1.5rem;
         }
         .detail4 {
-            color:white;
-            margin-left: 50px;
             font-weight: bold;
         }
-        .detail5 {
-            color:white;
-            margin-left: 50px;
-            margin-bottom: 50px;
+        .section, .section2 {
+            display: flex;
+            flex-direction: column;
+            background-color: transparent;
+            border-radius: 20px;
+            text-align: left;
+            padding: 1.5rem;
         }
-        .detail6 {
-            color:white;
-            margin-left:70px;
+        #footer {
+            margin-top: 4rem;
         }
-        @media (max-width:768px) {
+        @media (max-width: 1024px) {
             .headline {
                 text-align: center;
-                font-size: 56.2px;
-                color:white
-            }
-            #sed-website {
-                background-image: url("SED _Background.png");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-            #logo {
-                width: 33.7px;
-            }
-            .btn {
+                font-size: 3rem;
                 color: white;
-                border-radius: 28px;
-                height: 28px;
-                background-color: transparent;
-                border: none;
-                font-family: 'Times New Roman', Times, serif;
-                font-weight: bold;
-            }
-            #button1 {
-                margin-left:562px;
-            }
-            #button2 {
-                margin-right:28px;
-            }
-            .btn:hover {
-                background-color: white;
-                opacity: 0.70;
-                color: black;
-                border-radius: 28px;
-                text-decoration: underline;
-            }
-            #newsletters {
-                margin-left: 351px;
-                background-color: white;
-                color: black;
-                border: none;
-                font-family: 'Times New Roman', Times, serif;
-                border-radius: 5.6px;
-                height: 19.677px;
-                width: 140.56px;
-                font-weight: bold;
-            }
-            #newsletters:hover {
-                background-color: black;
-                color: white;
-                font-family: 'Times New Roman', Times, serif
-            }
-            .section {
-                background-color: transparent;
-                border-radius: 28px;
-                text-align: left;
-                padding:11.2445px
-            }
-            .section2 {
-                padding: 11.2445px;
             }
             .topic {
-                color:white;
-                margin-left: 28px;
-                font-size: 16.867px
+                font-size: 1.8rem;
             }
-            .detail {
-                color:white;
-                margin-left: 28px;
+        }
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 2.5rem;
             }
-            .detail2 {
-                color:white;
-                margin-left: 28px;
-                margin-right: 28px;
+            .btn {
+                padding: 10px 24px;
+                border-radius: 30px;
             }
-            .detail3 {
-                margin-left: 76.1px;
-                color:white;
+            #newsletters {
+                width: 70%;
+                height: 38px;
             }
-            .detail4 {
-                color:white;
-                margin-left: 28px;
-                font-weight: bold;
+            .topic {
+                font-size: 1.4rem;
             }
-            .detail5 {
-                color:white;
-                margin-left: 28px;
-                margin-bottom: 28px;
-            }
-            .detail6 {
-                color:white;
-                margin-left:39.4px;
-            }
-            #footer {
-                margin-top: 56.2px;
+            .section, .section2 {
+                padding: 1rem;
             }
         }
         @media (max-width: 480px) {
             .headline {
-                text-align: center; font-size: 35.14px;color:white
+                font-size: 1.8rem;
             }
-            #sed-website {
-                background-image: url("SED _Background.png");
-                background-repeat: no-repeat;
-                background-size: cover;
-                background-position: center center;
-            }
-            #logo {
-                width: 21.1px;
-            }
-            .btn{
-                color: white;
-                border-radius: 17.6px;
-                height: 17.6px;
-                background-color: transparent;
-                border: none;
-                font-family: 'Times New Roman', Times, serif;
-                font-weight: bold;
-            }
-            .btn:hover {
-                background-color: white;
-                opacity: 0.70;
-                color: black;
-                border-radius: 17.6px;
-                text-decoration: underline;
-            }
-            #button1 {
-                margin-left: 351.4px;
-            }
-            #button2 {
-                margin-right:17.6px;
+            .btn {
+                padding: 8px 20px;
+                border-radius: 20px;
             }
             #newsletters {
-                margin-left: 219.62px;
-                background-color: white;
-                color:black;
-                border:none;
-                font-family:'Times New Roman', Times, serif;
-                border-radius:3.51px;
-                height:12.3px;
-                width:87.85px;
-                font-weight:bold;
-            }
-            #newsletters:hover {
-                background-color:black;
-                color:white;
-                font-family:'Times New Roman', Times, serif
-            }
-            .section{
-                background-color:transparent;
-                border-radius:17.6px; 
-                text-align:left;
-                padding:7.03px;
-            }
-            .section2 {
-                padding:7.03px;
+                width: 80%;
+                height: 35px;
             }
             .topic {
-                color:white;
-                margin-left: 17.6px;
-                font-size: 10.542px
+                font-size: 1.1rem;
             }
-            .detail {
-                color:white;
-                margin-left: 17.6px;
+            .detail, .detail2 {
+                margin: 0.5rem 1rem;
             }
-            .detail2 {
-                color:white;
-                margin-left: 17.6px;
-                margin-right: 17.6px;
-            }
-            .detail3 {
-                margin-left: 45.68px;
-                color:white;
-            }
-            .detail4 {
-                color:white;
-                margin-left: 17.6px;
-                font-weight: bold;
-            }
-            .detail5 {
-                color:white;
-                margin-left: 17.6px;
-                margin-bottom: 17.6px;
-            }
-            .detail6 {
-                color:white;
-                margin-left:24.6px;
+            .section {
+                padding: 0.7rem;
             }
             #footer {
-                margin-top:35.14px;
+                margin-top: 2rem;
             }
-            
         }
     </style>
 </head>
@@ -341,5 +192,6 @@
     </footer>
 </body>
 </html>
+
 
 
