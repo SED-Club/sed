@@ -13,92 +13,96 @@
         #sed-website {
             background-image: url("SED _Background.png");
             background-size: cover;
-            background-repeat: no-repeat;
             background-position: center center;
-            opacity: 0.85;
+            opacity: 0.85
         }
         .btn{
             color: white;
-            border-radius: 50px;
-            height: 50px;
+            border-radius: 15%;
             background-color: transparent;
             border: none;
             font-family: 'Times New Roman', Times, serif;
             font-weight: bold;
+            width:10vw;
+            height: 10vh;
         }
         .btn:hover {
             background-color: white;
             opacity: 0.70;
             color: black;
-            border-radius: 50px;
+            border-radius: 15%;
             text-decoration: underline;
         }
         #newsletters {
-            margin-left: 625px;
+            margin-left: 35vw;
             background-color: white;
             color:black;
             border: none;
             font-family: 'Times New Roman', Times, serif;
-            border-radius: 10px;
-            height:35px;
-            width:250px;
+            border-radius: 30%;
+            height:6vh;
+            width:18vw;
             font-weight:bold;
         }
         #newsletters:hover {
             background-color:black;
             color:white;
-            font-family:'Times New Roman', Times, serif
+            font-family:'Times New Roman', Times, serif;
+            align-items: center;
+            text-decoration: underline;
         }
         .topic {
             color:white;
-            margin-left: 50px;
-            font-size: 30px
+            margin-left: 0.5vw;
+            font-size: 2vw;
+            font-weight: bold;
         }
         .detail {
             color:white;
-            margin-left: 50px;
+            margin-left: calc(50/1366*vw);
         }
         .detail2 {
             color:white;
-            margin-left: 50px;
-            margin-right: 50px;
+            margin-left: calc(50/1366*vw);
+            margin-right: calc(50/1366*vw);
         }
         .detail3 {
-            margin-left: 130px;
+            margin-left: calc(130/1366*vw);
             color:white;
         }
         .detail4 {
             color:white;
-            margin-left: 50px;
+            margin-left: calc(50/1366*vw);
             font-weight: bold;
         }
         .detail5 {
             color:white;
-            margin-left: 50px;
-            margin-bottom: 50px;
+            margin-left: calc(50/1366*vw);
+            margin-bottom: calc(50/1366*vh);
         }
         .detail6 {
             color:white;
-            margin-left:70px;
+            margin-left:calc(70/1366*vw);
         }
-        </style>
+    </style>
 </head>
 <body id="sed-website">
     <nav style="background-color: transparent;">
         <ul>
             <div>
-                <a href=""><button id="logo"style="background-color: transparent; border:none;"><img src="SED_Logo__2.png" style="width: 60px"></button></a>
-                <div class="buttons-container">
-                <a href="https://sed-club.github.io/magazine/"><button class="btn" id="button1" style="margin-left: 1000px;">SED Magazine</button></a>
-                <a href="https://sed-club.github.io/research/"><button class="btn">SED Research Team</button></a>
-                <a href="https://forms.gle/96jAWVPwLzkKpZC38"><button class="btn">Contact</button></a>
-                <a href="https://forms.gle/Gyx4p3jAEtJmvpwx7"><button class="btn" id="button2" style=" margin-right:50px;">Join</button></a>
+                <a href=""><button id="logo"style="background-color: transparent; border:none;"><img src="SED_Logo__2.png" style="width:5vw"></button></a>
+                <span>
+                    <a href=""><button class="btn" id="button1" style="margin-left: 46vw;">SED Magazine</button></a>
+                    <a href=""><button class="btn">SED Research Team</button></a>
+                    <a href="https://forms.gle/96jAWVPwLzkKpZC38"><button class="btn">Contact</button></a>
+                    <a href="https://forms.gle/Gyx4p3jAEtJmvpwx7"><button class="btn" id="button2" style="margin-right:2vw;">Join</button></a>
+                </span>
             <div>
         </ul>
     </nav>
     <main>
-        <h1 class="headline"style="text-align: center; font-size: 100px;color:white"> Welcome to SED Website!</h1>
-        <div class="section" style="background-color: transparent; border-radius: 50px; text-align: left; padding:20px">
+        <h1 style="text-align: center; font-size: 100px;color:white"> Welcome to SED Website!</h1>
+        <div class="section" style="background-color: transparent; border-radius: 25vw; text-align: left; padding:5vw">
             <h2 class="topic">About SED.....</h2>
             <p class="detail"> SED, an international science club mainly for middle/high school students and founded by Idam Suh, stands for Science, Environment, Developent.</p>
             <p class="detail2"> "S" represents the club's passion in science, and E, stands for environment, symbolize the importance of the sustainability where we can't proceed with scientific technological development just pursueing human's convenience, but only pursue no-damage-to-nature development. Lastly, "D" represents the development of passion/interest of members specifically in science. These components also well signifies the core value of the club.</p>
@@ -110,11 +114,11 @@
             <p class="detail3"> - Physics/Astronomy </p>
             <p class="detail3"> - Psychology/Neuroscience </p>
         </div>
-        <div>
-            <h3>Leadership</h3>
-            <p> Current leadership of SED Club is consisted with Idam Suh(leader) and Aayushi Maurya(vice-leader).
+        <div style="margin-left: 5vw;">
+            <h3 class="topic">Leadership</h3>
+            <p style="color:white;"> Current leadership of SED Club is consisted with Idam Suh(leader) and Aayushi Maurya(vice-leader).
         </div>
-        <div class="section2" style="padding: 20px;">
+        <div style="padding: 5vw;">
             <h4 class="topic"> What do SED Club Members do?</h4>
             <p class="detail"> SED Club is consisted with two team: Resarch Team, and Magazine Team.</p>
             <p class="detail4"> 1. Research Team</p>
@@ -122,7 +126,7 @@
             <p class="detail4"> 2. Magazine Team</p>
             <p class="detail"> Magazine Team members writes at least one article per person for monthly science Magazine named "Curiosite". More information is available in Magazine section.</p>
         </div>
-        <div class="section2"style="padding: 20px;">
+        <div style="margin-left: 5vw;">
             <h5 class="topic"> Our Values/Rule in the Club</h5>
             <p class="detail5">There are some values that SED pursues in addition to 3 core values(Science, Environment, and Development). This is also some requirement for eligibility of SED Application Form.</p>
             <p class="detail4">1. Academic Honesty</p>
@@ -132,22 +136,19 @@
             <p class="detail4">3. Respect/ Non-violence</p>
             <p class="detail">SED Members should be respectful to each other and there should be no violence in SED; this includes disrespectful/violent/bad words during the communication.</p>
         </div>
-        <div>
-            <h6 class="topic"> Newletters</h6>
+        <div style="margin-left: 5vw;">
+            <h6 class="topic">Newletters</h6>
             <p class="detail6"> If you want to receive newsletters from the club, please click the button below and fill out the form.</p>
             <a href="https://forms.gle/m3YTN7C6oP7YsEMt6"><button id="newsletters">Newsletters</button></a>
         </div>
-        <div>
+        <div style="padding: 5vw">
             <h7 class="topic">Application</h7>
             <p class="detail6"> If you want to be a member of SED Club, please fill out the form below.</p>
             <a href="https://forms.gle/WYV9keXKg7aLayrUA"><button id="newsletters">Join</button></a>
         </div>
     </main>    
-    <footer id="footer" style="margin-top: 100px;">
+    <footer id="footer" style="margin-top: 10vh;">
         <p style="color: white; text-align: center;">&copy; SED 2025. All rights reserved. If you have any questions/suggestions about the club, please click contact menu in the headline.</p>
     </footer>
 </body>
 </html>
-
-
-
