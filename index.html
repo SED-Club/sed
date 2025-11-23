@@ -33,6 +33,10 @@
             border-radius: 15%;
             text-decoration: underline;
         }
+        #btn-sec {
+            justify-content:flex;
+            gap: 1vw;
+        }
         #newsletters {
             margin-left: 35vw;
             background-color: white;
@@ -84,6 +88,11 @@
             color:white;
             margin-left:calc(70/1366*vw);
         }
+        @media (max-width: 468px) [
+            #btn1 {
+                margin-left: 15vw;
+            }
+        }
     </style>
 </head>
 <body id="sed-website">
@@ -91,12 +100,12 @@
         <ul>
             <div>
                 <a href=""><button id="logo"style="background-color: transparent; border:none;"><img src="SED_Logo__2.png" style="width:5vw"></button></a>
-                <span>
+                <div id="btn-sec">
                     <a href="https://sed-club.github.io/magazine/"><button class="btn" id="button1" style="margin-left: 46vw;">Magazine</button></a>
-                    <a href="https://sed-club.github.io/research/"><button class="btn">Research Team</button></a>
+                    <a href="https://sed-club.github.io/research/"><button class="btn">Research</button></a>
                     <a href="https://forms.gle/96jAWVPwLzkKpZC38"><button class="btn">Contact</button></a>
                     <a href="https://forms.gle/Gyx4p3jAEtJmvpwx7"><button class="btn" id="button2"">Join</button></a>
-                </span>
+                </div>
             <div>
         </ul>
     </nav>
@@ -152,6 +161,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
