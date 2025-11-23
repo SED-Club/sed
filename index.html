@@ -91,12 +91,19 @@
         #logo2 {
             width: 5vw;
         }
-        #button1 {
+        #btn-sec {
             margin-left: 38vw;
         }
-        @media (max-width:468px) {
+        @media (max-width: 600px) {
             #button1 {
-                margin-left: 20vw
+                margin-left: 12vw;
+            .btn {
+                justify-content: space-between;
+                gap:0.1vw;
+            }
+        @media (min-width: 601px) and (ma-width:768px) {
+            #button1 {
+                margin-left: 18vw;
             .btn {
                 justify-content: space-between;
                 gap:0.1vw;
@@ -109,7 +116,7 @@
             <div>
                 <a href=""><button id="logo"style="background-color: transparent; border:none;"><img src="SED_Logo__2.png" id="logo2"></button></a>
                 <span id="btn-sec">
-                    <a href="https://sed-club.github.io/magazine/"><button class="btn" id="button1">Magazine</button></a>
+                    <a href="https://sed-club.github.io/magazine/"><button class="btn">Magazine</button></a>
                     <a href="https://sed-club.github.io/research/"><button class="btn">Research</button></a>
                     <a href="https://forms.gle/96jAWVPwLzkKpZC38"><button class="btn">Contact</button></a>
                     <a href="https://forms.gle/Gyx4p3jAEtJmvpwx7"><button class="btn">Join</button></a>
@@ -165,6 +172,7 @@
     </footer>
 </body>
 </html>
+
 
 
 
