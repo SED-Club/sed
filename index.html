@@ -14,7 +14,7 @@
             background-image: url("SED _Background (1).png");
             background-size: cover;
             background-position: center center;
-            opacity: 0.85
+            opacity: 0.85;
         }
         .btn{
             color: white;
@@ -25,6 +25,7 @@
             font-weight: bold;
             width:10vh;
             height: 10vh;
+            text-align: right;
         }
         .btn:hover {
             background-color: white;
@@ -85,116 +86,33 @@
             margin-left:calc(70/1366*vw);
         }
         #button1{
-            margin-left: 60vw;
-        }
-        @media (min-width:890px) and (max-width:1068px) {
-            #button1 {
-                margin-left: 54vw;
-            }
-        }
-        @media (min-width:866px) and (max-width:890px) {
-            #button1 {
-                margin-left:53vw;
-            }
-        }
-        @media (min-width:801px) and (max-width:866px) {
-            #button1 {
-                margin-left:50vw;
-            }
-        }
-        @media (max-width: 801px) {
-            #button1 {
-                margin-left:46vw;
-            }
-        }
-        @media (min-width:725px) and (max-width:740px) {
-            #button1 {
-                margin-left:43vw;
-            }
-        }
-        @media (min-width:710px) and (max-width:724px) {
-            #button1 {
-                margin-left:42vw;
-            }
-        }
-        @media (min-width:641px) and (max-width:710px) {
-            #button1 {
-                margin-left:40vw;
-            }
-        }
-        @media (min-width:617px) and (max-width:641px) {
-            #button1 {
-                margin-left:38vw;
-            }
-        }
-        @media (min-width:583px) and (max-width:617px) {
-            #button1 {
-                margin-left:35vw;
-            }
-        }
-        @media (min-width:553px) and (max-width:583px) {
-            #button1 {
-                margin-left:32vw;
-            }
-        }
-        @media (min-width:525px) and (max-width:553px){
-            #button1 {
-                margin-left:29vw;
-            }
-        }
-        @media (min-width: 501px) and (max-width:525px) {
-            #button1 {
-                margin-left:26vw;
-            }
-        }
-        @media (min-width:478px) and (max-width:501px) {
-            #button1 {
-                margin-left:23vw;
-            }
-        }
-        @media (min-width:452px) and (max-width:478px) {
-            #button1 {
-                margin-left:19vw;
-            }
-        }
-        @media (min-width:428px) and (max-width:452px) {
-            #button1 {
-                margin-left:15vw;
-            }
-        }
-        @media (min-width:405px) and (max-width:428px) {
-            #button1 {
-                margin-left:11vw;
-            }
-        }
-        @media (min-width:392px) and (max-width:405px) {
-            #button1 {
-                margin-left:8vw;
-            }
-        }
-        @media  (min-width:378px) and (max-width:392px) {
-            #button1 {
-                margin-left:5vw;
-            }
-        }
-        @media (min-width:368px) and(max-width:378px) {
-            #button1 {
-                margin-left:1vw;
-            }
-        }
-        @media (max-width:369px) {
-            #button1 {
-                margin-left:0vw;
-            }
-            .btn {
-                font-size: 0.1px;
-            }
-            #lg {
-                width:2vw;
-            }
+            margin-left: calc(60/1366*vw);
         }
         #lg {
             width:8vw;
+        }
+        .btn-con {
+            display:flex;
+            justify-content: flex-end;
+        }
+        .btn {
+            margin-left:10px;
+        }
+        @media (max-width:814px) {
+            .btn{
+                font-size: 11px;
+            }
+        }
+        @media (max-width:680px) {
+            .btn {
+                font-size: 9px;
+            }
+        }
+        @media (max-width:524px) {
+            .btn{
+                width:5vh;
+                height:5vh;
+            }
         }
     </style>
 </head>
@@ -202,13 +120,14 @@
     <nav style="background-color: transparent;">
         <ul>
             <div>
-                <a href=""><button id="logo"style="background-color: transparent; border:none;"><img src="SED_Logo__2.png" id="lg""></button></a>
-                <span>
-                    <a href="https://sed-club.github.io/magazine/"><button class="btn" id="button1">SED Magazine</button></a>
-                    <a href="https://sed-club.github.io/research/"><button class="btn">SED Research Team</button></a>
+                <a href=""><button id="logo"style="background-color: transparent; border:none;"><img src="SED_Logo__2.png" id="lg"></button></a>
+                <div>
+                    <ul class="btn-con">
+                    <a href=""><button class="btn" id="button1">SED Magazine</button></a>
+                    <a href=""><button class="btn">SED Research Team</button></a>
                     <a href="https://forms.gle/96jAWVPwLzkKpZC38"><button class="btn">Contact</button></a>
-                    <a href="https://forms.gle/Gyx4p3jAEtJmvpwx7"><button class="btn" style="margin-right:2vw;">Join</button></a>
-                </span>
+                    <a href="https://forms.gle/Gyx4p3jAEtJmvpwx7"><button class="btn"  style="margin-right:10vw;">Join</button></a>
+                </div>
             <div>
         </ul>
     </nav>
@@ -228,7 +147,8 @@
         </div>
         <div style="margin-left: 5vw;">
             <h3 class="topic">Leadership</h3>
-            <p style="color:white;"> Current leadership of SED Club is consisted of Idam Suh(leader) and Aayushi Maurya(vice-leader).
+            <p style="color:white;"> Current leadership of SED Club is consisted of Idam Suh(leader).
+            <p style="color:white;">First Vice Leader:Aayushi Maurya</p>
         </div>
         <div style="padding: 5vw;">
             <h4 class="topic"> What do SED Club Members do?</h4>
@@ -264,8 +184,3 @@
     </footer>
 </body>
 </html>
-
-
-
-
-
