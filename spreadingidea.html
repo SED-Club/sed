@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <html lang="en>
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>SED | Spreading Idea</title>
+     <meta property="og:url" content="https://sedscienceclub.org/spreadingidea">
+     <link rel="icon" type="image/x-icon" href="SED_Logo.webp" alt="SED SI Team Website">
+    <meta name="description" content="A international science club stands for Science Environment Development, which consists of middle and high school students around the world.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            user-select: none;
+            overflow-x: hidden;
+        }
+        html, body, footer {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #sed-website {
+            background-image: url("SED _Background (1).webp");
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.85;
+            background-repeat: no-repeat;
+        }
+        .h {
+            background: transparent;
+            padding: 1.5rem 0;
+            position: relative;
+            width: 100%;
+        }
+        .c {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap !important;
+            width: 100%;
+        }
+        .l {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;           
+        }
+        .l img {
+            max-width: 100px;
+            height: auto;
+        }
+        .co {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .btn {
+            border: none;
+            background-color: transparent;
+            color: white;
+            width: auto;
+            height: auto;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            transition: all 0.3s ease;
+        }
+        .btn2 {
+            display: none;
+        }
+        .btn:hover {
+            background-color: white;
+            color: midnightblue;
+            opacity: 0.80;
+            border-radius: 20px;
+            text-decoration: underline;
+        }
+        .btn2 {
+            background-color: transparent; 
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            width: 80px;
+            height: 40px;
+            border-radius: 25px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn2:hover {
+            background-color: white;
+            color: black;
+        }
+        .btn3 {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 20px;
+            height: 45px;
+            width: 90%;
+            max-width: 250px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .btn3:hover {
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            text-decoration: underline;
+        }
+        .btn-con2 {
+            text-align: center;
+            align-items: center;
+            display: block; 
+        }
+        .topic {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+        .detail3 {
+            padding: 0;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .f {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        .mc {
+            display: inline-block;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: transparent;
+            transition: background-color 0.3s;
+            border: 0px solid tranparent;
+        }
+        .mt {
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            width: auto;                
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: none;
+            margin:0 !important
+        }
+        .sb {
+            display: flex;
+            flex-direction: row;
+            margin: 0 !important;
+        }
+        .sb button {
+            background-color: transparent;
+            color: white;
+            font-size: 16px;            
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            width: auto;                  
+            text-align: center;           
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+         .mt::before {
+            content: attr(data-text-closed);
+        }
+
+        .mt.active::before {
+            content: attr(data-text-open);
+        }
+        .mt.active {
+            background-color: white !important;
+            color:darkblue !important;
+            border: 0px solid midnightblue !important;
+        }
+        @media (max-width: 768px) {
+            .c {
+                flex-direction: column;
+                text-align: center;
+            }
+            .l {
+                margin-right: 0;
+            }
+            .co h1[style*="font-size: 100px"] {
+                font-size: 3rem !important;
+            }
+            .section[style*="border-radius: 25vw"] {
+                border-radius: 20px !important; 
+            }
+        }
+        @media (max-width: 520px) {
+            .detail {
+                width: 100%;
+            }
+            .f {
+                width: 100%;
+                padding: 0 15px;
+            }
+            .btn-con2 {
+                width: 100%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 595px) {
+            .mt {
+                display: block !important;
+            }
+            .sb {
+                display: none !important; 
+                flex-direction: column !important;
+                position: absolute; 
+                right: 40px;    
+                margin-top: 5px;
+                gap: 0px !important;
+                right: 0 !important;
+                top:100% !important;
+                left: 0 !important;
+                padding: 0 !important;
+                z-index:999;
+            }
+            .sb.show {
+                display: flex !important;
+            }
+            .sb button {
+                background-color: #FFFFFF !important;
+                color: darkblue !important;
+                font-size: 22px;            
+                width: 150px;                  
+                text-align: center;           
+                font-weight: 500;
+                transition: background-position 0.3s ease, padding-left 0.2s ease !important;
+                background-image: linear-gradient(to bottom, navy, transparent 50%) !important;
+                background-color: white !important;
+                background-size: 100% 200% !important;
+                background-position: bottom !important;
+                transition: background-position 0.3s ease, padding-left 0.2s ease !important;
+            }
+            .mc.show {
+                background-color: white !important;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+            .mc {
+                position: relative; 
+                border: 0px solid transparent;
+                display: flex !important;
+                flex-direction: column !important;
+                width: 150px;
+                font-size: 22px;
+                padding:0 !important;
+                box-sizing: border-box;
+                opacity: 0.75;
+            }
+        }
+    </style>
+</head>
+<body id="sed-website">
+    <nav class="h">
+        <div class="c">
+            <div class="l">
+                <img src="SED_Logo__2.webp" alt="SED Logo" style="width:100px;height:100px; margin-left: 40px;">
+            </div>
+            <div class="mc">
+                <button class="mt" id="mb" data-text-closed="☰ Menu" data-text-open="Unopen ✕" onclick="toggleMenu()"><span id="menu-text">Menu</span></button>
+                <div class="sb" id="ddM">
+                     <a href="https://sedscienceclub.org"><button aria-label="Home">Home</button></a>
+                    <a href="https://sedscienceclub.org/magazine"><button aria-label="Magazine">Magazine</button></a>
+                    <a href="https://sedscienceclub.org/research"><button aria-label="Research">Research</button></a>
+                    <a href="https://sedscienceclub.org/spreadingidea"><button aria-label="Spreading Idea">SI Team</button></a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyjBUHGf6LbbvugHw3occ6Pi5NO9jb9smWmtZneqfUZpD67g/viewform?usp=send_form"><button aria-label="Contact">Contact</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="co">
+        <h1 style="text-align: center; font-size: 100px;color:white">Welcome to SED SI Team Website!</h1>
+        <div class="section" style="background-color: transparent; border-radius: 25vw; text-align: left; padding: 0 50px;">
+            <h2 class="topic" style="text-decoration: underline;">Introduction</h2><br><br>
+            <p class="detail3">SED Spreading-Idea(SED SI Team) is a newly built team to spread  scientific information and education around the world, including making tutoring videos or competition questions.</p>
+        </div>
+        <div style="margin-left: 50px;">
+            <h3 class="topic" style="text-decoration: underline;">Values/Goal</h3><br>
+            <p class="detail3"> 1. Passions</p><br>
+            <p class="detail3">In SED SI Team, each member is assigned to their own field that they are most passionate about. SED SI Team members are expected to be committed to their passion.</p><br>
+            <p class="detail3"> 2. Development</p><br>
+            <p class="detail3">By making tutoring videos, study guides, and etc., SED SI Team members aim to help other students around the world to learn and gain better understanding of various concepts. In addition, development does not only mean helping others to learn, but also helping SED SI Team members develop their own knowledge and skills.</p><br>
+        </div>
+    </main>    
+    <footer class="f">
+        <p style="color: white; text-align: center;">&copy; SED 2026. All rights reserved. If you have any questions/suggestions about the club, please click contact menu in the navigation bar.</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById("ddM");
+            const btn = document.getElementById("mb");
+            menu.classList.toggle("show");
+            btn.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>

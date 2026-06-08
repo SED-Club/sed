@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<head>
+    <html lang="en"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial scale=1.0">
+    <title>SED | Home</title>
+    <meta property="og:image" content="https://sedscienceclub.org/SED_Logo.webp" />
+    <meta property="og:url" content="https://sedscienceclub.org">
+    <meta property="og:title" content="SED - Middle/High School Science Club">
+    <link rel="icon" type="image/x-icon" href="SED_Logo.webp" alt="SED Main Page">
+    <meta name="description" content="A international science club stands for Science Environment Development, which consists of middle and high school students around the world.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: 0;
+            user-select: none;
+            overflow-x: hidden;
+        }
+        html, body, footer {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        #sed-website {
+            background-image: url("SED _Background (1).webp");
+            background-size: cover;
+            background-position: center center;
+            opacity: 0.85;
+            background-repeat: no-repeat;
+        }
+        .h {
+            background: transparent;
+            padding: 1.5rem 0;
+            position: relative;
+            width: 100%;
+        }
+        .c {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: row !important;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: nowrap !important;
+            width: 100%;
+        }
+        .l {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            flex-shrink: 0;           
+        }
+        .l img {
+            max-width: 100px;
+            height: auto;
+        }
+        .bt {
+            display: flex !important;
+            flex-direction: row !important;
+            list-style: none;
+            gap: 0.5rem;        
+            flex-wrap: nowrap !important;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
+        .co {
+            flex: 1;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+        }
+        .btn {
+            border: none;
+            background-color: transparent;
+            color: white;
+            width: auto;
+            height: auto;
+            padding: 5px 10px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+            transition: all 0.3s ease;
+        }
+        .btn2 {
+            display: none;
+        }
+        .btn:hover {
+            background-color: white;
+            color: midnightblue;
+            opacity: 0.80;
+            border-radius: 20px;
+            text-decoration: underline;
+        }
+        .btn2 {
+            background-color: transparent; 
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            width: 80px;
+            height: 40px;
+            border-radius: 25px;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn2:hover {
+            background-color: white;
+            color: black;
+        }
+        #button1 {
+            margin-left: 20px;
+        }
+        #newsletters {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            background-color: white;
+            color: black;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 20px;
+            height: 48px;
+            width: 90%;
+            max-width: 250px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+        }
+        #newsletters:hover {
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            text-decoration: underline;
+        }
+        .btn3 {
+            margin-left: auto;
+            margin-right: auto;
+            background-color: lightgray;
+            color: black;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 20px;
+            height: 45px;
+            width: 90%;
+            max-width: 250px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+        }
+        .btn3:hover {
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            text-decoration: underline;
+        }
+        .btn-con2 {
+            text-align: center;
+            align-items: center;
+            display: block; 
+        }
+        .topic {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-top: 2rem;
+        }
+        .detail {
+            color: white;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
+        .detail3 {
+            padding: 0;
+            color: white;
+            margin-bottom: 0.5rem;
+        }
+        .detail4 {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .pop-o {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+        .pop-o.show {  
+            display: flex;  
+        }
+        .notice {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 450px;
+            width: 100%;
+        }
+        .f {
+            margin-top: 50px;
+            margin-bottom: 20px;
+            padding: 0 20px;
+        }
+        .mc {
+            display: inline-block;
+            font-family: 'Times New Roman', Times, serif;
+            background-color: transparent;
+            transition: background-color 0.3s;
+            border: 0px solid tranparent;
+        }
+        .mt {
+            background-color: transparent;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            width: auto;                
+            font-weight: bold;
+            transition: all 0.3s ease;
+            display: none;
+            margin:0 !important
+        }
+        .sb {
+            display: flex;
+            flex-direction: row;
+            margin: 0 !important;
+        }
+        .sb button {
+            background-color: transparent;
+            color: white;
+            font-size: 16px;            
+            border: none;
+            cursor: pointer;
+            padding: 10px 20px;
+            width: auto;                  
+            text-align: center;           
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .sb button :hover {
+            background-color: white;
+            color:black;
+            text-decoration: underline;
+        }
+         .mt::before {
+            content: attr(data-text-closed);
+        }
+
+        .mt.active::before {
+            content: attr(data-text-open);
+        }
+        .mt.active {
+            background-color: white !important;
+            color:darkblue !important;
+            border: 0px solid midnightblue !important;
+        }
+        @media (max-width: 768px) {
+            .c {
+                flex-direction: column;
+                text-align: center;
+            }
+            .l {
+                margin-right: 0;
+            }
+            .co h1[style*="font-size: 100px"] {
+                font-size: 3rem !important;
+            }
+            .section[style*="border-radius: 25vw"] {
+                border-radius: 20px !important; 
+            }
+        }
+        @media (max-width: 520px) {
+            .detail {
+                width: 100%;
+            }
+            .f {
+                width: 100%;
+                padding: 0 15px;
+            }
+            .btn-con2 {
+                width: 100%;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 595px) {
+            .mt {
+                display: block !important;
+            }
+            .sb {
+                display: none !important; 
+                flex-direction: column !important;
+                position: absolute; 
+                right: 40px;    
+                margin-top: 5px;
+                gap: 0px !important;
+                right: 0 !important;
+                top:100% !important;
+                left: 0 !important;
+                padding: 0 !important;
+                z-index:999;
+            }
+            .sb.show {
+                display: flex !important;
+            }
+            .sb button {
+                background-color: #FFFFFF !important;
+                color: darkblue !important;
+                font-size: 22px;            
+                width: 150px;                  
+                text-align: center;           
+                font-weight: 500;
+                transition: background-position 0.3s ease, padding-left 0.2s ease !important;
+                background-image: linear-gradient(to bottom, navy, transparent 50%) !important;
+                background-color: white !important;
+                background-size: 100% 200% !important;
+                background-position: bottom !important;
+                transition: background-position 0.3s ease, padding-left 0.2s ease !important;
+            }
+            .mc.show {
+                background-color: white !important;
+                box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            }
+            .mc {
+                position: relative; 
+                border: 0px solid transparent;
+                display: flex !important;
+                flex-direction: column !important;
+                width: 150px;
+                font-size: 22px;
+                padding:0 !important;
+                box-sizing: border-box;
+                opacity: 0.75;
+            }
+        }
+    </style>
+    <script type="application/ld+json">
+    {
+        "@type": "Organization",
+        "name": "SED",
+        "logo": "https://sedscienceclub.org/SED_Logo.webp",
+        "alternateName": "Science Environment Development",
+        "description": "A Science Club where middle and high school students can develop their scientific knowledge and skills with great passion.",
+        "foundingDate": "2025",
+        "areaServed": "Worldwide",
+    }
+    </script>
+</head>
+<body id="sed-website">
+    <nav class="h">
+        <div class="c">
+            <div class="l">
+                <img src="SED_Logo__2.webp" alt="SED Logo" style="width:100px;height:100px; margin-left: 40px;">
+            </div>
+            <div class="mc">
+                <button class="mt" id="mb" data-text-closed="☰ Menu" data-text-open="Unopen ✕" onclick="toggleMenu()"><span id="menu-text">Menu</span></button>
+                <div class="sb" id="ddM">
+                    <a href="https://sedscienceclub.org"><button aria-label="Home">Home</button></a>
+                    <a href="https://sedscienceclub.org/magazine"><button aria-label="Magazine">Magazine</button></a>
+                    <a href="https://sedscienceclub.org/research"><button aria-label="Research">Research</button></a>
+                    <a href="https://sedscienceclub.org/spreadingidea"><button aria-label="Spreading Idea">SI Team</button></a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyjBUHGf6LbbvugHw3occ6Pi5NO9jb9smWmtZneqfUZpD67g/viewform?usp=send_form"><button aria-label="Contact">Contact</button></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="co">
+        <h1 style="text-align: center; font-size: 100px;color:white">Welcome to SED Website!</h1>
+        <div class="section" style="background-color: transparent; border-radius: 25vw; text-align: left; padding: 0 50px;">
+            <h2 class="topic" style="text-decoration: underline;">About SED.....</h2><br><br>
+            <p class="detail">SED, an international science club aimed towards middle/high school students, was founded by Idam Suh, and stands for Science Environmental Development.</p>
+            <p class="detail">"S" represents the club's passion for science. "E"stands for environment, symbolizing the importance of the sustainability:  we must not  pursue scientific technological development for human's convenience, but for no-damage-to-nature development. Lastly, "D" represents the development of passion/interest of members, specifically in science. These values are also part of the eligibility requirements for the SED application. The club deals with 6 scientific fields/subjects in total as listed below.</p><br>
+            <p class="detail3"> - Biology</p>
+            <p class="detail3"> - Chemistry </p>
+            <p class="detail3"> - Computer Science </p>
+            <p class="detail3"> - Environmental Science </p>
+            <p class="detail3"> - Physics/Astronomy </p>
+            <p class="detail3"> - Psychology/Neuroscience </p><br>
+        </div>
+        <div style="margin-left: 50px;">
+            <h3 class="topic" style="text-decoration: underline;">Leadership</h3><br>
+            <p class="detail3"> Current Leader: Idam Suh</p><br>
+            <p class="detail3">Current Vice Leader: Aayushi Bhattarai</p><br>
+        </div>
+        <div style="padding: 0 50px;">
+            <h4 class="topic" style="text-decoration: underline;"> What do SED Club Members do?</h4><br>
+            <p class="detail">SED Club consists of 3 teams: Research Team, Magazine Team, and Spreading Idea(SI) Team.</p><br>
+            <p class="detail4">1. Research Team</p><br>
+            <p class="detail">Members of Research Team conduct research together to create positive externality out of scientific findings. The team consists of 2 divisions. The middle/high school students from Asia, Europe, Oceania, or Africa can join Research Team Division 1 and students from American continent can join Research Team Division 2.</p><br>
+            <p class="detail4">2. Magazine Team</p><br>
+            <p class="detail">Magazine Team members write at least one article per person for monthly science Magazine "Curiosite". More information is available on the Magazine’s website.</p><br>
+            <p class="detail4">3. SI Team<p><br>
+            <p class="detail">SI Team is a newly assembled  team since May 2026, aimed toward creating tutoring videos, worksheets, and study guides.</p><br>
+        </div>
+        <div style="padding: 0 50px;">
+            <h5 class="topic" style="text-decoration: underline;"> Our Values/Rules</h5><br>
+            <p class="detail">  There are several values that SED pursues in addition to our 3 core values (Science, Environment, and Development). These values are also requirements for eligibility of SED Application Form.</p><br>
+            <p class="detail4">1. Academic Honesty</p><br>
+            <p class="detail">SED members are not permitted to use AI or plagiarise somebody else’s work. If members use external sources, they must cite the work.</p><br>
+            <p class="detail4">2. Responsibility/Passion</p><br>
+            <p class="detail">While SED doesn't require the perfect performance or specific talent in science, members should be responsible for their tasks/roles in the club and should be passionate about science.</p><br>
+            <p class="detail4">3. Respect/ Non-violence<p><br>
+            <p class="detail">SED members should be respectful to each other and there should be no violence in SED; this includes disrespectful/violent/bad words during communication.</p>
+        </div>
+        <div style="padding: 0 50px">
+            <h6 class="topic" style="text-decoration: underline;">Newsletters</h6><br><br>
+            <p class="detail3"> If you would like to receive newsletters from the club, please click the button below and fill out the form.</p><br>
+            <a href="https://forms.gle/m3YTN7C6oP7YsEMt6"><button id="newsletters" aria-label="newsletters">Newsletter</button></a>
+        </div>
+        <div style="padding: 0 50px">
+            <h7 class="topic" style="text-decoration: underline;">Supporters</h7><br><br>
+            <p class="detail3">If you want to support this club that consists mainly of middle/high school students, please fill out the form below. More information about the role of  supporters is described in the form. If you are certified for 1 year or longer, you will gain an additional advantage when you fill out the registration form later. You will no longer be a supporter once you become a member.</p><br>
+            <a href="https://forms.gle/oLuqX1et7vXU6gT97"><button id="newsletters" aria-label="supporters">Join Supporters</button></a>
+        </div>
+        <div style="padding: 0 50px">
+            <h8 class="topic" style="text-decoration: underline;">Application</h8><br><br>
+            <p class="detail3">If you want to be a member of SED Club, please fill out the form below.</p><br>
+            <a href="https://forms.gle/Bfw6RYNmowNS7fzM9"><button id="newsletters" aria-label="Joining/Application">Become Club Member</button></a>
+        </div>
+        <div id="pop" class="pop-o">
+            <div class="notice">
+                <button id="end" style="float:right ;border:none; background-color: transparent;">X</button>
+                <h9 style="text-decoration: underline; color:black;" class="topic">Article Submission</h9><br><br>
+                <p>SED Magazine Team is now receiving articles for magazine. Following are requirements.</p>
+                <p>- No AI / Plagiarism</p>
+                <p>- APA formatted citations at the end (required)</p> <br><br>
+                <p>If you are interested in, check Magazine Team website.</p>
+                <a href="https://sedscienceclub.org/magazine"><button aria-label="Magazine Article Submission Page" class="btn3"style="display:flex; justify-content:center; align-items: center;">Magazine Team Website</button></a>
+            </div>
+        </div>
+    </main>    
+    <footer class="f">
+        <p style="color: white; text-align: center;">&copy; SED 2026. All rights reserved. If you have any questions/suggestions about the club, please click Contact menu in the navigation bar.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        const popup = document.getElementById("pop");
+        const closeBtn = document.getElementById("end");
+        if (!localStorage.getItem("popupShown")) {
+            popup.classList.add("show");
+        }
+        closeBtn.addEventListener("click", function() {
+            popup.classList.remove("show");
+            localStorage.setItem("popupShown", "true");
+        });
+        });
+        function toggleMenu() {
+            const menu = document.getElementById("ddM");
+            const btn = document.getElementById("mb");
+            menu.classList.toggle("show");
+            btn.classList.toggle("active");
+        }
+    </script>
+</body>
+</html>
