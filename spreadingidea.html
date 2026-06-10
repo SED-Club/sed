@@ -8,7 +8,7 @@
      <link rel="icon" type="image/x-icon" href="SED_Logo.webp" alt="SED SI Team Website">
     <meta name="description" content="A international science club stands for Science Environment Development, which consists of middle and high school students around the world.">
     <style>
-        * {
+          * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -59,6 +59,16 @@
             max-width: 100px;
             height: auto;
         }
+        .bt {
+            display: flex !important;
+            flex-direction: row !important;
+            list-style: none;
+            gap: 0.5rem;        
+            flex-wrap: nowrap !important;
+            margin: 0;
+            padding: 0;
+            align-items: center;
+        }
         .co {
             flex: 1;
             width: 100%;
@@ -103,6 +113,35 @@
             background-color: white;
             color: black;
         }
+        #button1 {
+            margin-left: 20px;
+        }
+        #newsletters {
+            margin-left: auto;
+            margin-right: auto;
+            display: inline-block;
+            background-color: white;
+            color: black;
+            border: none;
+            font-family: 'Times New Roman', Times, serif;
+            border-radius: 20px;
+            height: 48px;
+            width: 90%;
+            max-width: 250px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 12px;
+            transition: all 0.3s ease;
+            padding:12px 16px;
+            box-sizing: border-box;
+        }
+        #newsletters:hover {
+            background-color: black;
+            color: white;
+            font-family: 'Times New Roman', Times, serif;
+            align-items: center;
+            text-decoration: underline;
+        }
         .btn3 {
             margin-left: auto;
             margin-right: auto;
@@ -136,10 +175,41 @@
             font-weight: bold;
             margin-top: 2rem;
         }
+        .detail {
+            color: white;
+            margin-bottom: 0.5rem;
+            line-height: 1.6;
+        }
         .detail3 {
             padding: 0;
             color: white;
             margin-bottom: 0.5rem;
+        }
+        .detail4 {
+            color: white;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .pop-o {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: rgba(0,0,0,0.7);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            padding: 20px;
+        }
+        .pop-o.show {  
+            display: flex;  
+        }
+        .notice {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            max-width: 450px;
+            width: 100%;
         }
         .f {
             margin-top: 50px;
@@ -193,6 +263,7 @@
          .mt::before {
             content: attr(data-text-closed);
         }
+
         .mt.active::before {
             content: attr(data-text-open);
         }
@@ -292,11 +363,11 @@
             <div class="mc">
                 <button class="mt" id="mb" data-text-closed="☰ Menu" data-text-open="Unopen ✕" onclick="toggleMenu()"></button>
                 <div class="sb" id="ddM">
-                     <a href="https://sedscienceclub.org"><button aria-label="Home">Home</button></a>
+                    <a href="https://sedscienceclub.org"><button aria-label="Home">Home</button></a>
                     <a href="https://sedscienceclub.org/magazine"><button aria-label="Magazine">Magazine</button></a>
                     <a href="https://sedscienceclub.org/research"><button aria-label="Research">Research</button></a>
                     <a href="https://sedscienceclub.org/spreadingidea"><button aria-label="Spreading Idea">SI Team</button></a>
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyjBUHGf6LbbvugHw3occ6Pi5NO9jb9smWmtZneqfUZpD67g/viewform?usp=send_form"><button aria-label="Contact">Contact</button></a>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfyjBUHGf6LbbvugHw3occ6Pi5NO9jb9smWmtZneqfUZpD67g/viewform?usp=send_form"><button>Contact</button></a>
                 </div>
             </div>
         </div>
