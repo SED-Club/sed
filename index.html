@@ -268,17 +268,24 @@
             text-decoration: underline;
             border-radius: 20px;
         }
-         .mt::before {
-            content: attr(data-text-closed);
+         .mt.active {
+            background-color: white !important;
+            color: transparent !important;
+            position: relative;
+            border: 0px solid midnightblue !important;
         }
 
         .mt.active::before {
             content: attr(data-text-open);
-        }
-        .mt.active {
-            background-color: white !important;
-            color:darkblue !important;
-            border: 0px solid midnightblue !important;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: darkblue !important;
         }
         @media (max-width: 768px) {
             .c {
@@ -380,7 +387,7 @@
                 <img src="SED_Logo__2.webp" alt="SED Logo" style="width:100px;height:100px; margin-left: 40px;">
             </div>
             <div class="mc">
-                <button class="mt" id="mb" aria-label="Menu" data-text-closed="☰ Menu" data-text-open="Unopen ✕" onclick="toggleMenu()"></button>
+                <button class="mt" id="mb" aria-label="Menu" data-text-open="Unopen ✕" onclick="toggleMenu()">☰ Menu</button>
                 <div class="sb" id="ddM">
                     <a href="https://sedscienceclub.org"><button aria-label="Home">Home</button></a>
                     <a href="https://sedscienceclub.org/magazine"><button aria-label="Magazine">Magazine</button></a>
