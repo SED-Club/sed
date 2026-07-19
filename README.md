@@ -10,7 +10,7 @@ Welcome to the official repository of SED Science Club! 🪐 SED Science Club an
 
 ## ✨ About Website/ Detail About Club's Activity
 
-* 🏠 Home: Introduction to our club's goals, vision, and core values. The Activities/Project, Rule, etc. is also introduced
+* 🏠 Home: Introduction to our club's goals, vision, and core values. The Activities/Project, Rule, etc. are also introduced
 * 📚 Magazine Team: A showcase of our past issues. Curiosite is a monthly issued magazine made by SED Science Club's Magazine Team.
 * 💬 Research Team: Members of Research Team is Passionate about finding new ideas and dive into their interests, specifically in science.
 * 📡 SpreadingIdea Team(SI Team): SI Team is a team that makes a Tutoring Videos about science, as well as study guide and worksheet.
