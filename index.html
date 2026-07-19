@@ -227,12 +227,28 @@
             padding: 0 20px;
         }
         .mc {
-            display: inline-block;
-            font-family: 'Times New Roman', Times, serif;
-            background-color: transparent;
-            transition: background-color 0.3s;
-            border: 0px solid tranparent;
-            justify-content:flex-end;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: row !important;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: nowrap !important;
+            width: 100%;
+            gap:20px;
+        }
+        .sns{
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: row !important;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: nowrap !important;
+            width: 100%;
+            gap:20px;
         }
         .mt {
             background-color: transparent;
@@ -383,7 +399,7 @@
 </head>
 <body id="sed-website">
     <nav class="h">
-        <div style="display:flex; justify-content: flex-end;  padding: 0 4rem; align-items: center; gap: 20px" >
+        <div class="sns" >
             <a href="https://www.youtube.com/@SED-ScienceClub"><img src="youtube logo.webp" style="width:28px;height:28px"></a>
             <a href="https://www.instagram.com/sed_scienceclub/"><img src="instagram logo.webp" style="width:20px;height:20px"></a>
         </div>
